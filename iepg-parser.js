@@ -6,6 +6,7 @@ var moment = require('moment-timezone')
 
 
 var RE_IEPG_ENTRY = /([^:]+):\s*(.+)\r\n/g
+var RE_IEPG_SUBTITLE = /\r\n\r\n(.*)/
 
 function parse(data, callback) {
     data = jconv.decode(data, 'SJIS')
@@ -16,6 +17,9 @@ function parse(data, callback) {
         if (key.toLowerCase() === 'content-type') { continue }
         dict[key.replace(/-/g, '_')] = val
     }
+
+    RE_IEPG_SUBTITLE.exec(data)
+    dict.subtitle = RegExp.$1
 
     dict.start_time = moment.tz([
         dict.year,

@@ -23,6 +23,7 @@ describe('#parse()', () => {
                 assert.equal(parsed.subgenre_2, '15')
                 assert.equal(parsed.Copycontrol_1, '1,2,0')
                 assert.equal(parsed.Component_video_1, '179')
+                assert.equal(parsed.subtitle, '▽女性アナウンサーが本気で卓球対決!▽秋元っちゃんチキータ炸裂!?▽こんな繁田アナ見たことない!▽厚切りジェイソン大絶叫!「ホワイ?ジャパニーズピンポン!?」')
                 done()
             });
         });
