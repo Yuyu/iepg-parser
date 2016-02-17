@@ -1,0 +1,28 @@
+{
+  "name": "iepg-parser",
+  "version": "0.1.0",
+  "description": "Parse iEPG-data (.tvpid)",
+  "main": "iepg-parser.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Yuyu0/iepg-parser.git"
+  },
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "keywords": [
+    "epg",
+    "iepg",
+    "jptv",
+    "tv",
+    "parser"
+  ],
+  "author": "Yuyu",
+  "license": "MIT",
+  "dependencies": {
+    "bufferlist": "^0.1.0",
+    "jconv": "^0.1.5",
+    "moment-timezone": "^0.5.0",
+    "valid-url": "^1.0.9"
+  }
+}
